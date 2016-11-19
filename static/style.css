@@ -19,7 +19,7 @@ h1, h2, .center
 	text-align: center;
 }
 
-#display
+#display, #back
 {
 	border: solid black;
 	border-radius: 10px 5px 10px 5px;
@@ -27,13 +27,13 @@ h1, h2, .center
 	font-weight: bold;
 }
 
-#diet .titlecell, #diet .tablebottom, #diet .member
+.titlecell
 {
 	font-weight: bold;
 	background-color: rgb(196,0,0);
 }
 
-#diet td, #diet th
+#diet td, th
 {
 	background-color: rgb(128,0,0);
 	border-radius: 10px 5px 10px 5px;
@@ -41,15 +41,15 @@ h1, h2, .center
 	text-align: center;
 }
 
-.empty
-{
-	visibility: hidden;
-}
-
-.info, .market, .tablebottom
+.empty, .info, .market, .tablebottom
 {
 	border: none;
 	background-color: rgb(128,255,128);
+}
+
+.tablebottom
+{
+	background-color: rgb(64,0,0);
 }
 
 #splashinfo, #splashmarket
