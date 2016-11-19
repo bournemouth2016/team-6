@@ -13,12 +13,25 @@
 		
 		<h2>Please describe your family:</h2>
 		
-		<form method="post" action="traitement.php">
-		<p class="center"><input type="image" value="add" src="../images/add.png"/></p>
-		</form>
+		<p class="center"><img id="add" src="../images/add.png"/></p>
 		
-		<form method="post" action="traitement.php">
-		<p class="center"><input type="submit" value="Display diet" /></p>
-		</form>
+		<p class="center" id="display">Display diet</p>
+		
+		<script src="../jquery-3.1.1.js"></script>
+		<script>
+			var n = 1;
+			$("#display").hide();
+			$(function() {
+				$("#add").click(function(){
+					n += 1;
+				});
+			});
+			$(function() {
+				$("#display").click(function(){
+					alert(n);
+					window.location = "display.html";
+				});
+			});
+		</script>
 	</body>
 </html>
