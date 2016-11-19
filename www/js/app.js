@@ -40,6 +40,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+  
+  .state('app.region', {
+      url: '/region',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/region.html'
+        }
+      }
+    })
 
   .state('app.browse', {
       url: '/browse',
