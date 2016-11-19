@@ -47,28 +47,50 @@
 			</tr>
 			<tr>
 				<td class="empty"></td>
-				<td class="info"></td>
-				<td class="info"></td>
-				<td class="info"></td>
+				<td class="info"><img src="../images/info.png"></td>
+				<td class="info"><img src="../images/info.png"></td>
+				<td class="info"><img src="../images/info.png"></td>
 			</tr>
 			<tr class="buttons">
 				<td class="empty"></td>
 				<td class="market"><img src="../images/market.png"></td>
-				<td class="market"></td>
-				<td class="market"></td>
+				<td class="market"><img src="../images/market.png"></td>
+				<td class="market"><img src="../images/market.png"></td>
 			</tr>
 		</table>
 		
-		<div id="splashscreen">Hello world !</div>
+		<div id="splashinfo">Informations about an ingredient.</div>
 		
-		<script src="../jquery-3.1.1.js">
+		<div id="splashmarket">Informations about where to buy an ingredient.</div>
+		
+		<script src="../jquery-3.1.1.js"></script>
+		<script>
 			$(function() {
-				$("#maintitle").fadeOut("slow",function(){
-					$(this).fadeIn("slow",function(){
-						window.location = "presentation.html";
-					});
+				$("#splashinfo").hide();
+				$(".info").click(function(){
+					$("#diet").hide();
+					$("#splashinfo").show();
 				});
 			});
-    </script>
+			$(function() {
+				$("#splashmarket").hide();
+				$(".market").click(function(){
+					$("#diet").hide();
+					$("#splashmarket").show();
+				});
+			});
+			$(function() {
+				$("#splashinfo").click(function(){
+					$("#diet").show();
+					$("#splashinfo").hide();
+				});
+			});
+			$(function() {
+				$("#splashmarket").click(function(){
+					$("#diet").show();
+					$("#splashmarket").hide();
+				});
+			});
+		</script>
 	</body>
 </html>
