@@ -14,7 +14,7 @@
 		<div id="mainscreen">
 		<h2>Please describe your family:</h2>
 		
-		<span id="family"></span>
+		<ul id="family"></ul>
 		<p class="center"><img id="add" src="../images/add.png"/></p>
 		
 		<p class="center" id="display">Display diet</p>
@@ -26,19 +26,21 @@
 		
 		<script src="../jquery-3.1.1.js"></script>
 		<script>
-			var n = 1;
+			var n = 0;
 			$("#display").hide();
 			$("#splashmember").hide();
 			$(function() {
-				$("#add").click(function(event){
+				$("#add").click(function(){
 					$("#splashmember").show();
 					$("header").hide();
 					$("#mainscreen").hide();
 					$("#display").hide();
+					
+					$("#family").append('<li><span id="type_'+n+'">Type</span>, <span id="age_'+n+'">age</span>, <span id="activity_'+n+'">activity</span> <img id="delete_'+n+'" class="delete" src="../images/delete.png"></li>');
 				});
 			});
 			$(function() {
-				$("#save").click(function(event){
+				$("#save").click(function(){
 					var n = n+1;
 					$("#splashmember").hide();
 					$("header").show();
@@ -47,7 +49,14 @@
 				});
 			});
 			$(function() {
-				$("#display").click(function(event){
+				$("body").on("click",".delete",function(){
+					var n = n-1;
+					$("#family li").eq(n).remove();
+					alert("okay");
+				});
+			});
+			$(function() {
+				$("#display").click(function(){
 					window.location = "display.html";
 				});
 			});
