@@ -32,3 +32,8 @@ body, .empty, .info, .market
 {
 	background-color: rgb(64,0,0);
 }
+
+#splashinfo, #splashmarket
+{
+	display: none;
+}

@@ -47,36 +47,40 @@
 			</tr>
 			<tr>
 				<td class="empty"></td>
-				<td class="info"><img src="../images/info.png"></td>
-				<td class="info"><img src="../images/info.png"></td>
-				<td class="info"><img src="../images/info.png"></td>
+				<td class="info"><img src="../images/info.png" id="info_corn"></td>
+				<td class="info"><img src="../images/info.png" id="info_fish"></td>
+				<td class="info"><img src="../images/info.png" id="info_carrot"></td>
 			</tr>
 			<tr class="buttons">
 				<td class="empty"></td>
-				<td class="market"><img src="../images/market.png"></td>
-				<td class="market"><img src="../images/market.png"></td>
-				<td class="market"><img src="../images/market.png"></td>
+				<td class="market"><img src="../images/market.png" id="market_corn"></td>
+				<td class="market"><img src="../images/market.png" id="market_fish"></td>
+				<td class="market"><img src="../images/market.png" id="market_carrot"></td>
 			</tr>
 		</table>
 		
-		<div id="splashinfo">Informations about an ingredient.</div>
+		<div id="splashinfo">
+			<h3 id="infotitle">Title</h3>
+			<img id="infoimage">
+		</div>
 		
 		<div id="splashmarket">Informations about where to buy an ingredient.</div>
 		
 		<script src="../jquery-3.1.1.js"></script>
 		<script>
 			$(function() {
-				$("#splashinfo").hide();
-				$(".info").click(function(){
+				$(".info > img").click(function(event){
 					$("#diet").hide();
 					$("#splashinfo").show();
+					var ingredient = (event.target.id).substr(5);
+					$("#infotitle").html(ingredient).css("text-transform","capitalize");
 				});
 			});
 			$(function() {
-				$("#splashmarket").hide();
-				$(".market").click(function(){
+				$(".market > img").click(function(event){
 					$("#diet").hide();
 					$("#splashmarket").show();
+					var ingredient = (event.target.id).substr(7);
 				});
 			});
 			$(function() {
