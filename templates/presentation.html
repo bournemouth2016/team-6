@@ -11,24 +11,43 @@
 			<h1 id="titlepresentation">You are now connected in Burkina Faso</h1>
 		</header>
 		
+		<div id="mainscreen">
 		<h2>Please describe your family:</h2>
 		
+		<span id="family"></span>
 		<p class="center"><img id="add" src="../images/add.png"/></p>
 		
 		<p class="center" id="display">Display diet</p>
+		</div>
+		
+		<div id="splashmember">
+			<img src="../images/save.png" id="save">
+		</div>
 		
 		<script src="../jquery-3.1.1.js"></script>
 		<script>
 			var n = 1;
 			$("#display").hide();
+			$("#splashmember").hide();
 			$(function() {
-				$("#add").click(function(){
-					n += 1;
+				$("#add").click(function(event){
+					$("#splashmember").show();
+					$("header").hide();
+					$("#mainscreen").hide();
+					$("#display").hide();
 				});
 			});
 			$(function() {
-				$("#display").click(function(){
-					alert(n);
+				$("#save").click(function(event){
+					var n = n+1;
+					$("#splashmember").hide();
+					$("header").show();
+					$("#mainscreen").show();
+					$("#display").show();
+				});
+			});
+			$(function() {
+				$("#display").click(function(event){
 					window.location = "display.html";
 				});
 			});
