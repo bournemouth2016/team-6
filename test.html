@@ -1,0 +1,19 @@
+<html>
+	<title>Database gestion</title>
+	
+	<header>
+		<img src="images/stc_logo.png" width="300" height="200"> <h1>Save the children - Nutritional help app</h1>
+	</header>
+	<script src="alasql.min.js"></script> 
+
+	<table><td><img src="images/aubergine.jpg" width="590" height="390"></td><td><img src="images/concombre.jpg" width="590" height="390"></td><td><img src="images/sesame.jpg" width="590" height="390"></td><td><img src="images/maize.jpg" width="590" height="390"></td><td><img src="images/peanut.jpg" width="590" height="390"></td><td><img src="images/cottonOil.jpg" width="590" height="390"></td><td><img src="images/sorgho.jpg" width="590" height="390"></td></table>
+	
+	<script>
+		alasql("CREATE TABLE test (language INT, hello STRING)");
+    	alasql("INSERT INTO test VALUES (1,'Hello!')");
+    	alasql("INSERT INTO test VALUES (2,'Aloha!')");
+    	alasql("INSERT INTO test VALUES (3,'Bonjour!')");
+    	console.log( alasql("SELECT * FROM test") );
+	</script>
+
+</html>
