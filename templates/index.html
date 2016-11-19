@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
   
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../static/style.css" />
   
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
@@ -30,12 +30,14 @@
 <body>
 	<h1 id="maintitle">Cost of Diet</h1>
 
-    <script src="jquery-3.1.1.js"></script>
+	<img id="logo" title="logo" src="../images/stc_logo.png" align="center">
+
+    <script src="../jquery-3.1.1.js"></script>
     <script>
 		$(function() {
 			$("#maintitle").fadeOut("slow",function(){
 				$(this).fadeIn("slow",function(){
-					window.location = "display.html";
+					window.location = "presentation.html";
 				});
 			});
 		});
