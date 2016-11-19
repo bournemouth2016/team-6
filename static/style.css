@@ -1,3 +1,8 @@
+html
+{
+	font-family: sans-serif;
+}
+
 body, .empty, .info, .market
 {
 	background-color: rgb(128,255,128);
@@ -30,12 +35,12 @@ h1, h2, .center
 #diet .titlecell, #diet .tablebottom, #diet .member
 {
 	font-weight: bold;
-	background-color: rgb(196,0,0);
+	background-color: rgb(196,160,160);
 }
 
 #diet td, #diet th
 {
-	background-color: rgb(128,0,0);
+	background-color: rgb(196,128,128);
 	border-radius: 10px 5px 10px 5px;
 	border: solid black;
 	text-align: center;
