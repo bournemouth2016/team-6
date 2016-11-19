@@ -19,7 +19,7 @@ h1, h2, .center
 	text-align: center;
 }
 
-#display
+#display, #back
 {
 	border: solid black;
 	border-radius: 10px 5px 10px 5px;
