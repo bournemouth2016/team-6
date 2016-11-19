@@ -37,7 +37,7 @@
 		var cost = alasql("SELECT * FROM cost");
 		var total_cost = []
 		for (i=0;i<10;i++){
-		total_cost[i] = need[i].maize*cost[0].cost +need[i].sorgho*cost[1].cost+need[i].sorgho2*cost[2].cost+need[i].bikalga*cost[3].cost+need[i].peanut*cost[4].cost+need[i].peanut_dried*cost[5].cost+need[i].sesame*cost[6].cost+need[i].liver*cost[7].cost+need[i].aubergine*cost[8].cost+need[i].concombre*cost[9].cost+need[i].coton*cost[10].cost
+		total_cost[i] = (need[i].maize*cost[0].cost +need[i].sorgho*cost[1].cost+need[i].sorgho2*cost[2].cost+need[i].bikalga*cost[3].cost+need[i].peanut*cost[4].cost+need[i].peanut_dried*cost[5].cost+need[i].sesame*cost[6].cost+need[i].liver*cost[7].cost+need[i].aubergine*cost[8].cost+need[i].concombre*cost[9].cost+need[i].coton*cost[10].cost).toFixed(2);
 		}
 	</script>
 
