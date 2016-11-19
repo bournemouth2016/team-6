@@ -3,39 +3,31 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Nutritious diet</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="../static/style.css" />
 	</head>
 	<body>
 		<h1>Nutritious diet</h1>
 		
 		<table id="diet">
 			<tr>
-				<th></th>
+				<th class="empty"></th>
 				<th class="titlecell">corn</th>
 				<th class="titlecell">fish</th>
 				<th class="titlecell">carrot</th>
-				<!--><th class="titlecell">ingredient</th></-->
-				<!-->As many ingredients as needed for the diet : N</-->
 			</tr>
-			<tr> <!-->As many lines as members in the family : M</-->
-				<!--><td class="member">family member</td></-->
-				<!--><td>portion for n-th ingredient</td></-->
+			<tr>
 				<td class="member">Baby</td>
 				<td>5</td>
 				<td>0</td>
 				<td>15</td>
 			</tr>
-			<tr> <!-->As many lines as members in the family : M</-->
-				<!--><td class="member">family member</td></-->
-				<!--><td>portion for n-th ingredient</td></-->
+			<tr>
 				<td class="member">Father</td>
 				<td>15</td>
 				<td>10</td>
 				<td>8</td>
 			</tr>
-			<tr> <!-->As many lines as members in the family : M</-->
-				<!--><td class="member">family member</td></-->
-				<!--><td>portion for n-th ingredient</td></-->
+			<tr>
 				<td class="member">Mother</td>
 				<td>15</td>
 				<td>12</td>
@@ -43,34 +35,40 @@
 			</tr>
 			<tr>
 				<td class="titlecell">Total</td>
-				<td>35</td>
-				<td>22</td>
-				<td>30</td>
-				<!--><td>total of n-th ingredient</td></-->
-				<!-->N times</-->
+				<td class="tablebottom">35</td>
+				<td class="tablebottom">22</td>
+				<td class="tablebottom">30</td>
 			</tr>
 			<tr>
 				<td class="titlecell">Price</td>
-				<td>7</td>
-				<td>5.5</td>
-				<td>10</td>
-				<!--><td>total price for n-th ingredient</td></-->
-				<!-->N times</-->
+				<td class="tablebottom">7</td>
+				<td class="tablebottom">5.5</td>
+				<td class="tablebottom">10</td>
 			</tr>
 			<tr>
-				<td></td>
+				<td class="empty"></td>
 				<td class="info"></td>
 				<td class="info"></td>
 				<td class="info"></td>
-				<!-->N times</-->
 			</tr>
-			<tr>
-				<td></td>
+			<tr class="buttons">
+				<td class="empty"></td>
+				<td class="market"><img src="../images/market.png"></td>
 				<td class="market"></td>
 				<td class="market"></td>
-				<td class="market"></td>
-				<!-->N times</-->
 			</tr>
 		</table>
+		
+		<div id="splashscreen">Hello world !</div>
+		
+		<script src="../jquery-3.1.1.js">
+			$(function() {
+				$("#maintitle").fadeOut("slow",function(){
+					$(this).fadeIn("slow",function(){
+						window.location = "presentation.html";
+					});
+				});
+			});
+    </script>
 	</body>
 </html>
