@@ -11,9 +11,9 @@
 		<table id="diet">
 			<tr>
 				<th class="empty"></th>
-				<th class="titlecell">corn</th>
-				<th class="titlecell">fish</th>
-				<th class="titlecell">carrot</th>
+				<th class="titlecell">maize</th>
+				<th class="titlecell">eggplant</th>
+				<th class="titlecell">peanut</th>
 			</tr>
 			<tr>
 				<td class="member">Baby</td>
@@ -47,15 +47,15 @@
 			</tr>
 			<tr>
 				<td class="empty"></td>
-				<td class="info"><img src="../images/info.png" id="info_corn"></td>
-				<td class="info"><img src="../images/info.png" id="info_fish"></td>
-				<td class="info"><img src="../images/info.png" id="info_carrot"></td>
+				<td class="info"><img src="../images/info.png" id="info_maize"></td>
+				<td class="info"><img src="../images/info.png" id="info_eggplant"></td>
+				<td class="info"><img src="../images/info.png" id="info_peanut"></td>
 			</tr>
 			<tr class="buttons">
 				<td class="empty"></td>
-				<td class="market"><img src="../images/market.png" id="market_corn"></td>
-				<td class="market"><img src="../images/market.png" id="market_fish"></td>
-				<td class="market"><img src="../images/market.png" id="market_carrot"></td>
+				<td class="market"><img src="../images/market.png" id="market_maize"></td>
+				<td class="market"><img src="../images/market.png" id="market_eggplant"></td>
+				<td class="market"><img src="../images/market.png" id="market_peanut"></td>
 			</tr>
 		</table>
 		
@@ -74,6 +74,7 @@
 					$("#splashinfo").show();
 					var ingredient = (event.target.id).substr(5);
 					$("#infotitle").html(ingredient).css("text-transform","capitalize");
+					$("#infoimage").attr("src","../images/"+ingredient+".jpg").css("heigth","100px").css("width","100px");
 				});
 			});
 			$(function() {
