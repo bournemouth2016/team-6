@@ -26,7 +26,6 @@
 		
 		<script src="../jquery-3.1.1.js"></script>
 		<script>
-			var n = 0;
 			$("#display").hide();
 			$("#splashmember").hide();
 			$(function() {
@@ -35,13 +34,12 @@
 					$("header").hide();
 					$("#mainscreen").hide();
 					$("#display").hide();
-					
+					var n = $("#family li").length;
 					$("#family").append('<li><span id="type_'+n+'">Type</span>, <span id="age_'+n+'">age</span>, <span id="activity_'+n+'">activity</span> <img id="delete_'+n+'" class="delete" src="../images/delete.png"></li>');
 				});
 			});
 			$(function() {
 				$("#save").click(function(){
-					var n = n+1;
 					$("#splashmember").hide();
 					$("header").show();
 					$("#mainscreen").show();
@@ -49,9 +47,8 @@
 				});
 			});
 			$(function() {
-				$("body").on("click",".delete",function(){
-					var n = n-1;
-					$("#family li").eq(n).remove();
+				$("body").on("click",".delete",function(event){
+					$("#family li").eq(parseInt(event.target.id.substr(7))).remove();
 					alert("okay");
 				});
 			});
