@@ -21,7 +21,39 @@
 		</div>
 		
 		<div id="splashmember">
-			<img src="../images/save.png" id="save">
+			<p class="center">Age: <select id="age">
+										<option value="cat0">1-5 months</option>
+										<option value="cat1">6-8 months</option>
+										<option value="cat2">9-11 months</option>
+										<option value="cat3">12-23 months</option>
+										<option value="cat4">2-3 years</option>
+										<option value="cat5">3-4 years</option>
+										<option value="cat6">4-5 years</option>
+										<option value="cat7">5-6 years</option>
+										<option value="cat8">6-7 years</option>
+										<option value="cat9">7-8 years</option>
+										<option value="cat10">8-9 years</option>
+										<option value="cat11">9-10 years</option>
+										<option value="cat12">10-11 years</option>
+										<option value="cat13">11-12 years</option>
+										<option value="cat14">12-13 years</option>
+										<option value="cat15">13-14 years</option>
+										<option value="cat16">14-15 years</option>
+										<option value="cat17">16-29 years</option>
+										<option value="cat18">30-59 years</option>
+										<option value="cat19">>60 years</option>
+									</select></p>
+			<p class="center">Gender: <select id="gender">
+										<option value="child">Child</option>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+									</select></p>
+			<p class="center">Activity: <select id="activity">
+										<option value="nothing">Nothing</option>
+										<option value="pregnancy">Pregnancy</option>
+										<option value="lactation">Lactation</option>
+									</select></p>
+			<p class="center"><img src="../images/save.png" id="save"></p>
 		</div>
 		
 		<script src="../jquery-3.1.1.js"></script>
@@ -34,12 +66,15 @@
 					$("header").hide();
 					$("#mainscreen").hide();
 					$("#display").hide();
-					var n = $("#family li").length;
-					$("#family").append('<li><span id="type_'+n+'">Type</span>, <span id="age_'+n+'">age</span>, <span id="activity_'+n+'">activity</span> <img id="delete_'+n+'" class="delete" src="../images/delete.png"></li>');
 				});
 			});
 			$(function() {
 				$("#save").click(function(){
+					var n = $("#family li").length;
+					var age = $("#age option:selected").text();
+					var gender = $("#gender option:selected").text();
+					var activity = $("#activity option:selected").text();
+					$("#family").append('<li><span id="type_'+n+'">'+gender+'</span>, <span id="age_'+n+'">'+age+'</span>, <span id="activity_'+n+'">'+activity+'</span> <img id="delete_'+n+'" class="delete" src="../images/delete.png"></li>');
 					$("#splashmember").hide();
 					$("header").show();
 					$("#mainscreen").show();
@@ -49,7 +84,6 @@
 			$(function() {
 				$("body").on("click",".delete",function(event){
 					$("#family li").eq(parseInt(event.target.id.substr(7))).remove();
-					alert("okay");
 				});
 			});
 			$(function() {
