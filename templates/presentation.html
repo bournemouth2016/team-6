@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
     	<meta charset="utf-8" />
-
     	<link rel="stylesheet" href="../static/style.css" />
-
     	<title>Welcome !</title>
 	</head>
-
 	<body>
 		<header>
-			<img src="../images/burkina-faso.jpg" alt="Drapeau Burkina Faso" />
-      <h1> <center> You are now connected in Burkina Faso </center></h1>
+			<img src="../images/burkina-faso.jpg" alt="Burkina Faso Flag" id="flag"/>
+			<h1 id="titlepresentation">You are now connected in Burkina Faso</h1>
 		</header>
-    <h2> <center> Please describe your family: </center></h2>
-
-    <form method="post" action="traitement.php">
-
-   <p/>
-      <center><input type="image" value="add" src="../images/add.png"/><center/>
-
-   </p>
-
-  </form>
 		
-    <form method="post" action="traitement.php">
-
-   <p/>
-   <br>
-       <center><input type="submit" value="Display diet" /><center/>
-   <br/>
-   </p>
-
-	</form>
+		<h2>Please describe your family:</h2>
+		
+		<form method="post" action="traitement.php">
+		<p class="center"><input type="image" value="add" src="../images/add.png"/></p>
+		</form>
+		
+		<form method="post" action="traitement.php">
+		<p class="center"><input type="submit" value="Display diet" /></p>
+		</form>
 	</body>
 </html>
