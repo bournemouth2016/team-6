@@ -20,6 +20,7 @@ body, .empty, .info, .market
 	background-color: rgb(128,0,0);
 	border-radius: 10px 5px 10px 5px;
 	border: solid black;
+	text-align: center;
 }
 
 .empty, .info, .market, .tablebottom
@@ -36,4 +37,9 @@ body, .empty, .info, .market
 #splashinfo, #splashmarket
 {
 	display: none;
+	background-color: rgb(128,128,255);
+	border: solid black;
+	border-radius: 10px 5px 10px 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }

@@ -62,9 +62,13 @@
 		<div id="splashinfo">
 			<h3 id="infotitle">Title</h3>
 			<img id="infoimage">
+			<p id="nutriments"></p>
 		</div>
 		
-		<div id="splashmarket">Informations about where to buy an ingredient.</div>
+		<div id="splashmarket">
+			<h3 id="markettitle">Title</h3>
+			<p id="markets"></p>
+		</div>
 		
 		<script src="../jquery-3.1.1.js"></script>
 		<script>
@@ -73,8 +77,12 @@
 					$("#diet").hide();
 					$("#splashinfo").show();
 					var ingredient = (event.target.id).substr(5);
+					var nutriment1 = "calcium";
+					var nutriment2 = "iron";
+					var nutriment3 = "magnesium";
 					$("#infotitle").html(ingredient).css("text-transform","capitalize");
 					$("#infoimage").attr("src","../images/"+ingredient+".jpg").css("heigth","100px").css("width","100px");
+					$("#nutriments").html("The "+ingredient+" provides mostly "+nutriment1+", "+nutriment2+" and "+nutriment3+".");
 				});
 			});
 			$(function() {
@@ -82,6 +90,8 @@
 					$("#diet").hide();
 					$("#splashmarket").show();
 					var ingredient = (event.target.id).substr(7);
+					$("#markettitle").html("Where can you find "+ingredient+"?").css("text-transform","capitalize");
+					$("#markets").html("You can buy "+ingredient+" in various local markets from your region.");
 				});
 			});
 			$(function() {
